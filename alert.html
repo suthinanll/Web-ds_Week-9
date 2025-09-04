@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Grid-Rwd</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="alert alert-primary mt-4" role="alert">
+            A simple primary alert—check it out!
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            A simple secondary alert—check it out!
+        </div>
+        <div class="alert alert-success" role="alert">
+            A simple success alert—check it out!
+        </div>
+        <div class="alert alert-danger" role="alert">
+            A simple danger alert—check it out!
+        </div>
+        <div class="alert alert-warning" role="alert">
+            A simple warning alert—check it out!
+        </div>
+        <div class="alert alert-info" role="alert">
+            A simple info alert—check it out!
+        </div>
+        <div class="alert alert-light" role="alert">
+            A simple light alert—check it out!
+        </div>
+        <div class="alert alert-dark" role="alert">
+            A simple dark alert—check it out!
+        </div>
+
+        <h2>Show Alert</h2>
+        <!-- ปุ่ม -->
+        <button id="showAlert" class="btn btn-primary">Alert</button>
+
+        <!-- Alert (ซ่อนอยู่ก่อน) -->
+        <div id="myAlert" class="alert alert-success mt-4 alert-dismissible fade" role="alert" style="display:none;">
+            This Alert
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+
+    <script>
+        document.getElementById("showAlert").addEventListener("click", function (){
+            let alertBox = document.getElementById("myAlert");
+            alertBox.style.display = "block";  // เแสดง alert เมื่อกดปุ่ม
+            alertBox.classList.add("show");    // ใช้ class fade และ show ของ bootstrap
+        });
+    </script>
+</body>
+
+</html>
